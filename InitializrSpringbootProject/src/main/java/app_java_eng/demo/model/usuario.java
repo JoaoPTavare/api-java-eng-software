@@ -8,7 +8,7 @@ package app_java_eng.demo.model;
  *
  * @author jptav
  */
-public class usuario {
+public class Usuario {
     
     private Integer codUsuario;
     private String nome;
@@ -16,10 +16,10 @@ public class usuario {
     private String email;
     private String tell;
 
-    public usuario() {
+    public Usuario() {
     }
 
-    public usuario(Integer codUsuario, String nome, String cpf, String email, String tell) {
+    public Usuario(Integer codUsuario, String nome, String cpf, String email, String tell) {
         this.codUsuario = codUsuario;
         this.nome = nome;
         this.cpf = cpf;
