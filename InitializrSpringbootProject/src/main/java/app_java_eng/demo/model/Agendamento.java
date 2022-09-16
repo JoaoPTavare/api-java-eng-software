@@ -8,7 +8,5 @@ package app_java_eng.demo.model;
 
 public class Agendamento {
     
-    
-   
-    
+ 
 }
