@@ -8,17 +8,17 @@ package app_java_eng.demo.model;
  *
  * @author jptav
  */
-public class EnderecoUsuario {
+public class enderecoUsuario {
  
     
     private Integer codEndereco;
     private String endereco;
     private int numEndereco;
 
-    public EnderecoUsuario() {
+    public enderecoUsuario() {
     }
 
-    public EnderecoUsuario(Integer codEndereco, String endereco, int numEndereco) {
+    public enderecoUsuario(Integer codEndereco, String endereco, int numEndereco) {
         this.codEndereco = codEndereco;
         this.endereco = endereco;
         this.numEndereco = numEndereco;

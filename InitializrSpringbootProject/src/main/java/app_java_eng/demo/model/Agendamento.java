@@ -2,16 +2,16 @@ package app_java_eng.demo.model;
  
 
 
-public class Agendamento {
+public class agendamento {
     private String nome;
     private String CNPJ;
     private String dataNasc;
     private String telCont;
 
-    public Agendamento() {
+    public agendamento() {
     }
 
-    public Agendamento(String nome, String CNPJ, String dataNasc, String telCont) {
+    public agendamento(String nome, String CNPJ, String dataNasc, String telCont) {
         this.nome = nome;
         this.CNPJ = CNPJ;
         this.dataNasc = dataNasc;

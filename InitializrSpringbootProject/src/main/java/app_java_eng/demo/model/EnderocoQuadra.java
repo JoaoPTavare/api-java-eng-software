@@ -8,6 +8,6 @@ package app_java_eng.demo.model;
  *
  * @author jptav
  */
-public class EnderocoQuadra {
+public class enderocoQuadra {
     
 }

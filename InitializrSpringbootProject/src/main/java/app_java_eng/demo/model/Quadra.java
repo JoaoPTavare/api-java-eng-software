@@ -1,7 +1,7 @@
 
 package app_java_eng.demo.model;
 
-public class Quadra {
+public class quadra {
     private Integer cod_Quadra;
     private Integer cod_colaborador;
     private Integer cod_agendament;
@@ -9,10 +9,10 @@ public class Quadra {
     private String localidade;
     private String estrutura;
 
-    public Quadra() {
+    public quadra() {
     }
 
-    public Quadra(Integer cod_Quadra, Integer cod_colaborador, Integer cod_agendament, String modalidades, String localidade, String estrutura) {
+    public quadra(Integer cod_Quadra, Integer cod_colaborador, Integer cod_agendament, String modalidades, String localidade, String estrutura) {
         this.cod_Quadra = cod_Quadra;
         this.cod_colaborador = cod_colaborador;
         this.cod_agendament = cod_agendament;
