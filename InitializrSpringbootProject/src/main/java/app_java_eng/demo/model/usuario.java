@@ -4,16 +4,35 @@
  */
 package app_java_eng.demo.model;
 
-/**
- *
- * @author jptav
- */
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name= "Usuario")
 public class Usuario {
     
+    
+    //Usaudo apra cria as tabelas automaticamente e gerar o id automaticamente
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codUsuario")
     private Integer codUsuario;
+   
+    @Column(name = "nome")
     private String nome;
+    
+    @Column(name = "cpf")
     private String cpf;
+    
+    @Column(name = "email")
     private String email;
+    
+    @Column(name = "tell")
     private String tell;
 
     public Usuario() {

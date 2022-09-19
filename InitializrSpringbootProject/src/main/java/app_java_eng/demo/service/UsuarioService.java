@@ -8,6 +8,6 @@ package app_java_eng.demo.service;
  *
  * @author jptav
  */
-public interface usuarioService {
+public interface UsuarioService {
     
 }

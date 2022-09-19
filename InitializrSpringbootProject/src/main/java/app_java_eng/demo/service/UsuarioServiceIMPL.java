@@ -4,10 +4,21 @@
  */
 package app_java_eng.demo.service;
 
-/**
- *
- * @author jptav
- */
-public class usuarioServiceIMPL {
+import app_java_eng.demo.model.Usuario;
+import app_java_eng.demo.repository.UsuarioRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+ @Service
+public class UsuarioServiceIMPL implements UsuarioService {
     
+    
+    @Autowired
+    private UsuarioRepository UsuarioRepository;
+    
+       @Override
+        public List<Usuario> listausuario(){
+        return UsuarioRepository.findAll();
+    }
 }
