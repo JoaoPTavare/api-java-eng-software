@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package app_java_eng.demo.service;
 
-/**
- *
- * @author jptav
- */
+
+import app_java_eng.demo.model.Agendamento;
+import java.util.List;
+
 public interface AgendamentoService {
-    
+    public List<Agendamento> listaAgendamento();
+
+
 }

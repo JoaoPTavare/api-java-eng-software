@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package app_java_eng.demo.service;
 
-/**
- *
- * @author jptav
- */
-public class AgendamentoServiceIMPL {
+import app_java_eng.demo.model.Agendamento;
+import app_java_eng.demo.repository.AgendamentoRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class AgendamentoServiceIMPL implements AgendamentoService{
     
+    @Autowired
+    private AgendamentoRepository AgendamentoReposytory;
+  
+    
+    @Override
+    public List<Agendamento> listaAgendamento(){
+        return AgendamentoReposytory.findAll();
+    }  
 }

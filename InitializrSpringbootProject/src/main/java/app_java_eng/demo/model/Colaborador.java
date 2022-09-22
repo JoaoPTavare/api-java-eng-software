@@ -11,7 +11,7 @@ import org.hibernate.annotations.GeneratorType;
 
 @Entity
 @Table(name = "colaborador")
-public class colaborador {
+public class Colaborador {
     
     @Id
     @Column(name = "codColaborador")
@@ -29,10 +29,10 @@ public class colaborador {
     @Column(name = "telCont")
     private String telCont;
 
-    public colaborador() {
+    public Colaborador() {
     }
 
-    public colaborador(long codColaborador, String nome, String cnpj, String dataNasc, String telCont) {
+    public Colaborador(long codColaborador, String nome, String cnpj, String dataNasc, String telCont) {
         this.codColaborador = codColaborador;
         this.nome = nome;
         this.cnpj = cnpj;
