@@ -70,3 +70,4 @@ this.numEndereco = numEndereco;
     public String toString() {
         return "EnderecoQuadra{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + '}';
     }
+}

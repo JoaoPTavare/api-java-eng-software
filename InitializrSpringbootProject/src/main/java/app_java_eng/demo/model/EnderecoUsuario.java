@@ -1,5 +1,4 @@
-
-
+import app_java_eng.demo.model.Usuario;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -65,3 +64,4 @@ import org.hibernate.annotations.GeneratorType;
     public String toString() {
         return "EnderecoUsuario{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + '}';
     }
+}
