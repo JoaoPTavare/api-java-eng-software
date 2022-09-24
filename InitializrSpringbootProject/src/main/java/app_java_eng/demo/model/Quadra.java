@@ -1,5 +1,8 @@
 package app_java_eng.demo.model;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
 public class Quadra{
     private Integer cod_Quadra;
     private Integer cod_colaborador;
@@ -7,6 +10,10 @@ public class Quadra{
     private String modalidades;
     private String localidade;
     private String estrutura;
+
+    @OneToOne
+    @JoinColumn(name = "codColaborador", referencedColumnName = "codColaborador")
+    private Colaborador colaborador;
 
     public Quadra() {
     }
