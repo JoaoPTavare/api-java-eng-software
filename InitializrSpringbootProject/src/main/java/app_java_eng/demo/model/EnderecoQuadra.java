@@ -3,7 +3,7 @@
  *
  * @author leo
  */
-public class EndereçoQuadra {
+public class EnderecoQuadra {
 
     private Integer codEndereco;
     private String endereco;

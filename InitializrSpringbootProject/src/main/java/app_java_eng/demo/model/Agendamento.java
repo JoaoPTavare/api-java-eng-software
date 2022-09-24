@@ -1,5 +1,8 @@
 package app_java_eng.demo.model;
  
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
 
 
 public class Agendamento {
@@ -8,6 +11,14 @@ public class Agendamento {
     private String dataNasc;
     private String telCont;
 
+    
+    
+    @OneToMany
+    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+    private Usuario usuario;
+
+    
+    
     public Agendamento() {
     }
 
