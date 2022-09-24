@@ -5,11 +5,11 @@
 package app_java_eng.demo.service;
 
 import app_java_eng.demo.model.Usuario;
-import app_java_eng.demo.repository.UsuarioRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import app_java_eng.demo.repository.UsuarioRepository;
 
 @Service
 public class UsuarioServiceIMPL implements UsuarioService {

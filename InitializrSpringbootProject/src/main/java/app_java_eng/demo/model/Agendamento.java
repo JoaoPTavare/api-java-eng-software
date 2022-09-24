@@ -7,14 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-
-
 public class Agendamento {
-    
-    
-    
-    
-     @Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codAgendamento")
     private Integer codAgendamento;
@@ -31,14 +26,10 @@ public class Agendamento {
     @Column(name = "telCont")
     private String telCont;
 
-    
-    
     @OneToMany
     @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
     private Usuario usuario;
 
-    
-    
     public Agendamento() {
     }
 
@@ -65,10 +56,6 @@ public class Agendamento {
         this.usuario = usuario;
     }
 
-    
-    
-    
-    
     public String getNome() {
         return nome;
     }

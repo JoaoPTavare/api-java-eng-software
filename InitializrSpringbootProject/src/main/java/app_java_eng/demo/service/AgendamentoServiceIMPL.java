@@ -8,20 +8,17 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class AgendamentoServiceIMPL implements AgendamentoService{
     
     @Autowired
     private AgendamentoRepository AgendamentoReposytory;
-  
-    
+
     @Override
     public List<Agendamento> listaAgendamento(){
         return AgendamentoReposytory.findAll();
     }  
-
-    
+ 
     @Override
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento) {
        return  AgendamentoReposytory.findById(codAgendamento); 
@@ -29,18 +26,18 @@ public class AgendamentoServiceIMPL implements AgendamentoService{
 
     @Override
     public Agendamento atualizaAgendamento(Agendamento agendamento) {
-           return  AgendamentoReposytory.save(agendamento); 
+       return  AgendamentoReposytory.save(agendamento); 
     }
     
     @Override
     public Agendamento salvaAgendamento(Agendamento agendamento) {
-               return AgendamentoReposytory.save(agendamento);
+        return AgendamentoReposytory.save(agendamento);
     }
 
    
     @Override
     public void deleteByIdAgendamento(Integer codAgendamento) {
-              AgendamentoReposytory.deleteById(codAgendamento);
+         AgendamentoReposytory.deleteById(codAgendamento);
     }
 
 

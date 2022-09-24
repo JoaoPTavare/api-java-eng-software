@@ -6,9 +6,10 @@ import java.util.List;
 import java.util.Optional;
 
 public interface QuadraService {
+    
     public List<Quadra> listaQuadra();
     
-       public Optional<Quadra> getByIdQuadra(Integer codQuadra);
+    public Optional<Quadra> getByIdQuadra(Integer codQuadra);
     
     public Quadra atualizaQuadra(Quadra quadra);
     

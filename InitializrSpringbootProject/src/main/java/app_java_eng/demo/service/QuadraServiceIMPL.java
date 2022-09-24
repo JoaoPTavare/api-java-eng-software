@@ -8,20 +8,18 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public abstract class QuadraServiceIMPL implements QuadraService{
    
      @Autowired 
      private QuadraRepository QuadraRepository;
      
- 
-     @Override
-     public List<Quadra> listaQuadra(){
-          return QuadraRepository.findAll();
+    @Override
+    public List<Quadra> listaQuadra(){
+        return QuadraRepository.findAll();
      }
      
-         @Override
+    @Override
     public Optional<Quadra> getByIdQuadra(Integer codQuadra) {
         return QuadraRepository.findById(codQuadra); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

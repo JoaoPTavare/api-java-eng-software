@@ -10,27 +10,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ColaboradorServiceIMPL implements ColaboradorService {
-    
-    
+     
     @Autowired
     private ColaboradorRepository ColaboradorRepository;
     
-    
-    
-    
-       @Override
-        public List<Colaborador> listacolaborador(){
-        return ColaboradorRepository.findAll();
+    @Override
+    public List<Colaborador> listacolaborador(){
+    return ColaboradorRepository.findAll();
     }
         
-  
-
     @Override
     public Colaborador salvaColaborador(Colaborador colaborador) {
         return ColaboradorRepository.save(colaborador);
     }
  
-
     @Override
     public void deleteByIdColaborador(Integer codColaborador) {
       ColaboradorRepository.deleteById(codColaborador);

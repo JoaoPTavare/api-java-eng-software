@@ -7,65 +7,54 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
-
-/**
- *
- * @author leo
- */
 public class EnderecoQuadra {
 
-    
-    
-        @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codEndereco")
-    private Integer codEndereco;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "codEndereco")
+private Integer codEndereco;
         
-           @Column(name = "endereco") 
-    private String endereco;
+@Column(name = "endereco") 
+private String endereco;
            
-              @Column(name = "numEndereco") 
-    private Integer numEndereco;
-    
-    
-    
+@Column(name = "numEndereco") 
+private Integer numEndereco;
         
-     @OneToMany
-    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
-    private Usuario usuario;
+@OneToMany
+@JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+private Usuario usuario;
     
-    
-    public EnderecoQuadra() {
+public EnderecoQuadra() {
+}
+
+public EnderecoQuadra (Integer codEndereco, String endereco, int numEndereco) {
+this.codEndereco = codEndereco;
+this.endereco = endereco;
+this.numEndereco = numEndereco;
+}
+
+public Integer getCodEndereco() {
+return codEndereco;
     }
 
-    public EnderecoQuadra (Integer codEndereco, String endereco, int numEndereco) {
-        this.codEndereco = codEndereco;
-        this.endereco = endereco;
-        this.numEndereco = numEndereco;
+ public void setCodEndereco(Integer codEndereco) {
+this.codEndereco = codEndereco;
     }
 
-    public Integer getCodEndereco() {
-        return codEndereco;
+public String getEndereco() {
+return endereco;
     }
 
-    public void setCodEndereco(Integer codEndereco) {
-        this.codEndereco = codEndereco;
+public void setEndereco(String endereco) {
+this.endereco = endereco;
     }
 
-    public String getEndereco() {
-        return endereco;
+public int getNumEndereco() {
+return numEndereco;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public int getNumEndereco() {
-        return numEndereco;
-    }
-
-    public void setNumEndereco(int numEndereco) {
-        this.numEndereco = numEndereco;
+public void setNumEndereco(int numEndereco) {
+this.numEndereco = numEndereco;
     }
 
     @Override

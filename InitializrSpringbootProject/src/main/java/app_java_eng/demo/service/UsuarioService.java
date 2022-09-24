@@ -8,12 +8,9 @@ import app_java_eng.demo.model.Agendamento;
 import app_java_eng.demo.model.Usuario;
 import java.util.List;
 import java.util.Optional;
- 
-
-
 
 public interface UsuarioService {
-        public Usuario salvaUsuario(Usuario usuario);
+    public Usuario salvaUsuario(Usuario usuario);
     
     public List<Usuario> listausuario();
     
@@ -22,11 +19,5 @@ public interface UsuarioService {
     public Usuario atualizaUsuario(Usuario usuario);
     
     public void deleteByIdUsuario(Integer codUsuario);    
-    
-    
-    
-    
-    
-
 
 }
