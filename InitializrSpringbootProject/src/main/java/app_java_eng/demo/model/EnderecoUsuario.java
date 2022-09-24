@@ -1,13 +1,28 @@
 
 package app_java_eng.demo.model;
 
-public class EnderecoUsuario {
- 
-    
-    private Integer codEndereco;
-    private String endereco;
-    private Integer numEndereco;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+import org.hibernate.annotations.GeneratorType;
 
+@Entity
+@Table(name = "EnderecoUsuario")
+   public class EnderecoUsuario {
+ 
+    @Id
+    @Column(name = "codEndereco")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer codEndereco;
+    @Column(name = "endereco")
+    private String endereco;
+     @Column(name = "NumEndereco")
+    private Integer numEndereco;
+    
     public EnderecoUsuario() {
     }
 
@@ -17,7 +32,7 @@ public class EnderecoUsuario {
         this.numEndereco = numEndereco;
     }
 
-    public Integer getCodEndereco() {
+    public long getCodEndereco() {
         return codEndereco;
     }
 

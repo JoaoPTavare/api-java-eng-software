@@ -3,10 +3,26 @@
  *
  * @author leo
  */
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+import org.hibernate.annotations.GeneratorType;
+
+@Entity
+@Table(name = "EnderecoQuadra")
 public class EnderecoQuadra {
 
+    @Id
+    @Column(name = "codEndereco")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codEndereco;
+    @Column(name = "endereco")
     private String endereco;
+    @Column(name = "NumEndereco")
     private Integer numEndereco;
     
     public EnderecoQuadra() {
@@ -18,7 +34,7 @@ public class EnderecoQuadra {
         this.numEndereco = numEndereco;
     }
 
-    public Integer getCodEndereco() {
+    public long getCodEndereco() {
         return codEndereco;
     }
 
