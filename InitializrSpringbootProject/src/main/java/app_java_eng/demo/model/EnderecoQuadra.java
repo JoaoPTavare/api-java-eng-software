@@ -1,6 +1,3 @@
-
-
-
 import app_java_eng.demo.model.Usuario;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,35 +8,19 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
-
-
 @Entity
 @Table(name = "EnderecoQuadra")
 public class EnderecoQuadra {
 
-
-     
-
-    
-    
     @Id
+    @Column(name = "codEndereco")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codEnderecoQuadra")
-    private Integer codEnderecoQuadra;
-
-        
-    @Column(name = "endereco") 
+    private Integer codEndereco;
+    @Column(name = "endereco")
     private String endereco;
-           
-
-    @Column(name = "numEndereco") 
+    @Column(name = "NumEndereco")
     private Integer numEndereco;
-
- 
-    
-
-        
+  
 @OneToMany
 @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
 private Usuario usuario;
@@ -47,25 +28,18 @@ private Usuario usuario;
 public EnderecoQuadra() {
 }
 
-    public EnderecoQuadra(Integer codEnderecoQuadra, String endereco, Integer numEndereco, Usuario usuario) {
-        this.codEnderecoQuadra = codEnderecoQuadra;
-        this.endereco = endereco;
-        this.numEndereco = numEndereco;
-        this.usuario = usuario;
+public EnderecoQuadra (Integer codEndereco, String endereco, int numEndereco) {
+this.codEndereco = codEndereco;
+this.endereco = endereco;
+this.numEndereco = numEndereco;
+}
+
+    public Integer getCodEndereco() {
+        return codEndereco;
     }
 
-
-
-
-
-
-
-    public Integer getCodEnderecoQuadra() {
-        return codEnderecoQuadra;
-    }
-
-    public void setCodEnderecoQuadra(Integer codEnderecoQuadra) {
-        this.codEnderecoQuadra = codEnderecoQuadra;
+    public void setCodEndereco(Integer codEndereco) {
+        this.codEndereco = codEndereco;
     }
 
     public String getEndereco() {
@@ -91,15 +65,8 @@ public EnderecoQuadra() {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
     @Override
     public String toString() {
-        return "EnderecoQuadra{" + "codEnderecoQuadra=" + codEnderecoQuadra + ", endereco=" + endereco + ", numEndereco=" + numEndereco + ", usuario=" + usuario + '}';
+        return "EnderecoQuadra{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + '}';
     }
- 
-
-
-
-
-    
 }
