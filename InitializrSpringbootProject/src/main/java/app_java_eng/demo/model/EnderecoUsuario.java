@@ -1,47 +1,32 @@
-
 package app_java_eng.demo.model;
 
 import javax.persistence.Column;
-<<<<<<< HEAD
 import javax.persistence.Entity;
-=======
->>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-<<<<<<< HEAD
-import javax.persistence.Table;
-import org.hibernate.annotations.GeneratorType;
-
-@Entity
-@Table(name = "EnderecoUsuario")
-   public class EnderecoUsuario {
- 
-    @Id
-    @Column(name = "codEndereco")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer codEndereco;
-    @Column(name = "endereco")
-    private String endereco;
-     @Column(name = "NumEndereco")
-    private Integer numEndereco;
-=======
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+
+
+
+@Entity
+@Table(name= "EnderecoUsuario")
 public class EnderecoUsuario {
  
-        @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codEndereco")
     private Integer codEndereco;
         
         
-        @Column(name = "endereco")    
+    @Column(name = "endereco")    
     private String endereco;
         
-        @Column(name = "numEndereco")     
+    @Column(name = "numEndereco")     
     private Integer numEndereco;
 
     
@@ -52,7 +37,6 @@ public class EnderecoUsuario {
 
     
     
->>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
     
     public EnderecoUsuario() {
     }
@@ -63,7 +47,7 @@ public class EnderecoUsuario {
         this.numEndereco = numEndereco;
     }
 
-    public long getCodEndereco() {
+    public Integer getCodEndereco() {
         return codEndereco;
     }
 
@@ -91,10 +75,6 @@ public class EnderecoUsuario {
     public String toString() {
         return "EnderecoUsuario{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + '}';
     }
-    
-    
-    
-    
     
     
 }
