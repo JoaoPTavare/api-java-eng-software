@@ -29,20 +29,21 @@ public class ColaboradorServiceIMPL implements ColaboradorService {
     public Colaborador salvaColaborador(Colaborador colaborador) {
         return ColaboradorRepository.save(colaborador);
     }
-
-    @Override
-    public Optional<Colaborador> getByIdColaborador(Integer codColaborador) {
-        return ColaboradorRepository.findById(codColaborador); 
-    }
-
-    @Override
-    public Colaborador atualizaColaborador(Colaborador colaborador) {
-          return ColaboradorRepository.save(colaborador); 
-    }
+ 
 
     @Override
     public void deleteByIdColaborador(Integer codColaborador) {
       ColaboradorRepository.deleteById(codColaborador);
+    }
+
+    @Override
+    public Optional<Colaborador> getByIdcolaborador(Integer codcolaborador) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Colaborador atualizacolaborador(Colaborador colaborador) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
    

@@ -17,7 +17,8 @@ public class Colaborador {
     @Id
     @Column(name = "codColaborador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codColaborador;
+    private Integer codColaborador;
+    
     @Column(name = "nome")
     private String nome;
     
@@ -33,7 +34,7 @@ public class Colaborador {
     public Colaborador() {
     }
 
-    public Colaborador(long codColaborador, String nome, String cnpj, String dataNasc, String telCont) {
+    public Colaborador(Integer codColaborador, String nome, String cnpj, String dataNasc, String telCont) {
         this.codColaborador = codColaborador;
         this.nome = nome;
         this.cnpj = cnpj;
@@ -45,7 +46,7 @@ public class Colaborador {
         return codColaborador;
     }
 
-    public void setCodColaborador(long codColaborador) {
+    public void setCodColaborador(Integer codColaborador) {
         this.codColaborador = codColaborador;
     }
 
