@@ -20,7 +20,7 @@ public interface UsuarioService {
 
     public Optional<Usuario> getByIdUsuario(Integer codUsuario);
     
-    public Usuario atualizaUsuario(Usuario usuari);
+    public Usuario atualizaUsuario(Usuario usuario);
     
     public void deleteByIdUsuario(Integer codUsuario);    
     
