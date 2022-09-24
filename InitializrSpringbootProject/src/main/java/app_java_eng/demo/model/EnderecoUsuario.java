@@ -2,11 +2,15 @@
 package app_java_eng.demo.model;
 
 import javax.persistence.Column;
+<<<<<<< HEAD
 import javax.persistence.Entity;
+=======
+>>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+<<<<<<< HEAD
 import javax.persistence.Table;
 import org.hibernate.annotations.GeneratorType;
 
@@ -22,6 +26,33 @@ import org.hibernate.annotations.GeneratorType;
     private String endereco;
      @Column(name = "NumEndereco")
     private Integer numEndereco;
+=======
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+public class EnderecoUsuario {
+ 
+        @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codEndereco")
+    private Integer codEndereco;
+        
+        
+        @Column(name = "endereco")    
+    private String endereco;
+        
+        @Column(name = "numEndereco")     
+    private Integer numEndereco;
+
+    
+    
+     @OneToMany
+    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+    private Usuario usuario;
+
+    
+    
+>>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
     
     public EnderecoUsuario() {
     }

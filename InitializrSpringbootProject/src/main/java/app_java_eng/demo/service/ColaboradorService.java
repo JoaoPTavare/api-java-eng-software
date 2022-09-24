@@ -8,17 +8,19 @@ import java.util.Optional;
 
 
 public interface ColaboradorService {
-        public Colaborador salvaColaborador(Colaborador colaborador);
+     public Colaborador salvaColaborador(Colaborador colaborador);
     
     
-      public List<colaborador> listacolaborador();
+    public List<Colaborador> listacolaborador();
 
 
-    public Optional<colaborador> getByIdcolaborador(Integer codcolaborador);
+    public Optional<Colaborador> getByIdcolaborador(Integer codcolaborador);
     
-    public colaborador atualizacolaborador (Colaborador colaborador);
+    public Colaborador atualizacolaborador (Colaborador colaborador);
     
-    public void deleteByIdColaborador (Integer codColaborador);    
+        
+    public void deleteByIdColaborador(Integer codColaborador); 
+
     
     
-    
+}

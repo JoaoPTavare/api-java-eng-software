@@ -1,4 +1,13 @@
 
+import app_java_eng.demo.model.Usuario;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+
 /**
  *
  * @author leo
@@ -16,6 +25,7 @@ import org.hibernate.annotations.GeneratorType;
 @Table(name = "EnderecoQuadra")
 public class EnderecoQuadra {
 
+<<<<<<< HEAD
     @Id
     @Column(name = "codEndereco")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +33,28 @@ public class EnderecoQuadra {
     @Column(name = "endereco")
     private String endereco;
     @Column(name = "NumEndereco")
+=======
+    
+    
+        @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codEndereco")
+    private Integer codEndereco;
+        
+           @Column(name = "endereco") 
+    private String endereco;
+           
+              @Column(name = "numEndereco") 
+>>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
     private Integer numEndereco;
+    
+    
+    
+        
+     @OneToMany
+    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+    private Usuario usuario;
+    
     
     public EnderecoQuadra() {
     }
