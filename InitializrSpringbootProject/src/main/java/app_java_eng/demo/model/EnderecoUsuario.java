@@ -1,13 +1,37 @@
 
 package app_java_eng.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
 public class EnderecoUsuario {
  
-    
+        @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codEndereco")
     private Integer codEndereco;
+        
+        
+        @Column(name = "endereco")    
     private String endereco;
+        
+        @Column(name = "numEndereco")     
     private Integer numEndereco;
 
+    
+    
+     @OneToMany
+    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+    private Usuario usuario;
+
+    
+    
+    
     public EnderecoUsuario() {
     }
 
