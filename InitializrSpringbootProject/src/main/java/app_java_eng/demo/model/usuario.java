@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "Usuario")
-public class usuario {
+public class Usuario {
     
     
     //Usaudo apra cria as tabelas automaticamente e gerar o id automaticamente
@@ -35,10 +35,10 @@ public class usuario {
     @Column(name = "tell")
     private String tell;
 
-    public usuario() {
+    public Usuario() {
     }
 
-    public usuario(Integer codUsuario, String nome, String cpf, String email, String tell) {
+    public Usuario(Integer codUsuario, String nome, String cpf, String email, String tell) {
         this.codUsuario = codUsuario;
         this.nome = nome;
         this.cpf = cpf;

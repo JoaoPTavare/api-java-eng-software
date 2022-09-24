@@ -10,15 +10,11 @@ import java.util.Optional;
 public interface AgendamentoService {
     public List<Agendamento> listaAgendamento();
 
-
-    
-        
-      public List<Agendamento> listaagendamento();
-
-
+    public Agendamento salvaAgendamento(Agendamento agendamento);
+ 
     public Optional<Agendamento> getByIdAgendamento(Integer codAgendamento);
     
-    public Usuario atualizaAgendamento(Agendamento agendamento);
+    public Agendamento atualizaAgendamento(Agendamento agendamento);
     
     public void deleteByIdAgendamento(Integer codAgendamento);    
     

@@ -4,7 +4,7 @@ import app_java_eng.demo.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
  
-public interface usuarioRepository  extends JpaRepository<Usuario, Integer>{
+public interface UsuarioRepository  extends JpaRepository<Usuario, Integer>{
     
     
     

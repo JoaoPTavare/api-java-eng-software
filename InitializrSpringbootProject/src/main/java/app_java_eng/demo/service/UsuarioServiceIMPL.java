@@ -4,7 +4,6 @@
  */
 package app_java_eng.demo.service;
 
-import app_java_eng.demo.model.Agendamento;
 import app_java_eng.demo.model.Usuario;
 import app_java_eng.demo.repository.UsuarioRepository;
 import java.util.List;

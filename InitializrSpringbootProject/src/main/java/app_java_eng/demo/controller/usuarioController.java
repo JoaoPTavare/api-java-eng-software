@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class usuarioController {
+public class UsuarioController {
     
     
      @Autowired
@@ -34,17 +34,17 @@ public class usuarioController {
      
  
     
-    @GetMapping("produto/{codproduto}")
+    @GetMapping("Usuario/{codUsuario}")
     public ResponseEntity<Optional<Usuario>> getByIdUsuario(@PathVariable Integer codUsuario){
         return ResponseEntity.status(HttpStatus.OK).body(UsuarioService.getByIdUsuario(codUsuario));
     }
 
-    @PostMapping("produto")
+    @PostMapping("usuario")
     public ResponseEntity<Usuario> salvaUsuario(@RequestBody Usuario usuario){
         return ResponseEntity.status(HttpStatus.CREATED).body(UsuarioService.salvaUsuario(usuario));
     }
 
-    @PutMapping("produto")
+    @PutMapping("usuario")
     public ResponseEntity<Usuario> atualizaUsuario(@RequestBody Usuario usuario){
         return ResponseEntity.status(HttpStatus.OK).body(UsuarioService.atualizaUsuario(usuario));
     }
