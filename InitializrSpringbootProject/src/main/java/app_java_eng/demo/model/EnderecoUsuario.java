@@ -2,11 +2,35 @@
 package app_java_eng.demo.model;
 
 import javax.persistence.Column;
+<<<<<<< HEAD
 import javax.persistence.Entity;
+=======
+<<<<<<< HEAD
+import javax.persistence.Entity;
+=======
+>>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
+>>>>>>> 43e0bf78a46d5c089320f048771c04ed159c4901
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+<<<<<<< HEAD
+import javax.persistence.Table;
+import org.hibernate.annotations.GeneratorType;
+
+@Entity
+@Table(name = "EnderecoUsuario")
+   public class EnderecoUsuario {
+ 
+    @Id
+    @Column(name = "codEndereco")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer codEndereco;
+    @Column(name = "endereco")
+    private String endereco;
+     @Column(name = "NumEndereco")
+    private Integer numEndereco;
+=======
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.hibernate.annotations.GeneratorType;
@@ -28,6 +52,13 @@ import org.hibernate.annotations.GeneratorType;
      @OneToMany
     @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
     private Usuario usuario;
+<<<<<<< HEAD
+=======
+
+    
+    
+>>>>>>> b12767b1cd6e62d62485fa1b6f900a97407c6dfb
+>>>>>>> 43e0bf78a46d5c089320f048771c04ed159c4901
     
     public EnderecoUsuario() {
     }
