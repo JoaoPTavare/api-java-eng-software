@@ -5,8 +5,6 @@ import javax.persistence.OneToOne;
 
 public class Quadra{
     private Integer cod_Quadra;
-    private Integer cod_colaborador;
-    private Integer cod_agendament;
     private String modalidades;
     private String localidade;
     private String estrutura;
@@ -18,10 +16,8 @@ public class Quadra{
     public Quadra() {
     }
 
-    public Quadra(Integer cod_Quadra, Integer cod_colaborador, Integer cod_agendament, String modalidades, String localidade, String estrutura) {
+    public Quadra(Integer cod_Quadra, String modalidades, String localidade, String estrutura) {
         this.cod_Quadra = cod_Quadra;
-        this.cod_colaborador = cod_colaborador;
-        this.cod_agendament = cod_agendament;
         this.modalidades = modalidades;
         this.localidade = localidade;
         this.estrutura = estrutura;
@@ -33,22 +29,6 @@ public class Quadra{
 
     public void setCod_Quadra(Integer cod_Quadra) {
         this.cod_Quadra = cod_Quadra;
-    }
-
-    public Integer getCod_colaborador() {
-        return cod_colaborador;
-    }
-
-    public void setCod_colaborador(Integer cod_colaborador) {
-        this.cod_colaborador = cod_colaborador;
-    }
-
-    public Integer getCod_agendament() {
-        return cod_agendament;
-    }
-
-    public void setCod_agendament(Integer cod_agendament) {
-        this.cod_agendament = cod_agendament;
     }
 
     public String getModalidades() {
@@ -75,9 +55,10 @@ public class Quadra{
         this.estrutura = estrutura;
     }
 
+
     @Override
     public String toString() {
-        return "Quadra{" + "cod_Quadra=" + cod_Quadra + ", cod_colaborador=" + cod_colaborador + ", cod_agendament=" + cod_agendament + ", modalidades=" + modalidades + ", localidade=" + localidade + ", estrutura=" + estrutura + '}';
+        return "Quadra{" + "cod_Quadra=" + cod_Quadra + ", modalidades=" + modalidades + ", localidade=" + localidade + ", estrutura=" + estrutura + '}';
     }
     
     
