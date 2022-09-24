@@ -2,6 +2,7 @@
 package app_java_eng.demo.service;
 
 import app_java_eng.demo.model.Quadra;
+import app_java_eng.demo.model.Usuario;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,5 +15,9 @@ public interface QuadraService {
     public Quadra atualizaQuadra(Quadra quadra);
     
     public void deleteByIdQuadra(Integer codQuadra);    
+    
+    public Quadra atualizaUsuario(Quadra quadra);
+    
+    public Quadra salvaQuadra(Quadra quadra);
     
 }

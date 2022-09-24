@@ -41,18 +41,18 @@ public class QuadraController {
     
     
     @PostMapping("quadra")
-    public ResponseEntity<Quadra> salvaUsuario(@RequestBody Quadra quadra){
+    public ResponseEntity<Quadra> salvaQuadra(@RequestBody Quadra quadra){
         return ResponseEntity.status(HttpStatus.CREATED).body(QuadraService.salvaQuadra(quadra));
     }
 
     @PutMapping("quadra")
-    public ResponseEntity<Quadra> atualizaUsuario(@RequestBody Quadra quadra){
+    public ResponseEntity<Quadra> atualizaQuadra(@RequestBody Quadra quadra){
         return ResponseEntity.status(HttpStatus.OK).body(QuadraService.atualizaQuadra(quadra));
     }
     
     @DeleteMapping("Quadra/{codQuadra}")
-    public ResponseEntity<String> deleteByIdQuadra(@PathVariable Integer codUsuario){
-        QuadraService.deleteByIdUsuario(codQuadra);
+    public ResponseEntity<String> deleteByIdQuadra(@PathVariable Integer codQuadra){
+        QuadraService.deleteByIdQuadra(codQuadra);
         return ResponseEntity.status(HttpStatus.OK).body("Usuário removido com sucesso");
     }
     

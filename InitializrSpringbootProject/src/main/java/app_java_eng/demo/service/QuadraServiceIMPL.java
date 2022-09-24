@@ -34,5 +34,8 @@ public abstract class QuadraServiceIMPL implements QuadraService{
       QuadraRepository.deleteById(codQuadra); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
         
-   
+       @Override
+    public Quadra salvaQuadra(Quadra quadra) {
+        return QuadraRepository.save(quadra);
+    }
 }
