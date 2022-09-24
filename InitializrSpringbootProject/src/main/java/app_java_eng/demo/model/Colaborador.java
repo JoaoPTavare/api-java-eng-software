@@ -14,6 +14,7 @@ import org.hibernate.annotations.GeneratorType;
 @Table(name = "colaborador")
 public class Colaborador {
     
+
     @Id
     @Column(name = "codColaborador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
