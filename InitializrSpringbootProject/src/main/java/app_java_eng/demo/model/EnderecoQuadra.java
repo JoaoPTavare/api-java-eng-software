@@ -1,4 +1,4 @@
-import app_java_eng.demo.model.Usuario;
+ package app_java_eng.demo.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,18 +22,20 @@ public class EnderecoQuadra {
     @Column(name = "NumEndereco")
     private Integer numEndereco;
   
-@OneToMany
-@JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
+@OneToOne
 private Usuario usuario;
     
 public EnderecoQuadra() {
 }
 
-public EnderecoQuadra (Integer codEndereco, String endereco, int numEndereco) {
-this.codEndereco = codEndereco;
-this.endereco = endereco;
-this.numEndereco = numEndereco;
-}
+    public EnderecoQuadra(Integer codEndereco, String endereco, Integer numEndereco, Usuario usuario) {
+        this.codEndereco = codEndereco;
+        this.endereco = endereco;
+        this.numEndereco = numEndereco;
+        this.usuario = usuario;
+    }
+
+
 
     public Integer getCodEndereco() {
         return codEndereco;
@@ -65,8 +68,13 @@ this.numEndereco = numEndereco;
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
     @Override
     public String toString() {
-        return "EnderecoQuadra{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + '}';
+        return "EnderecoQuadra{" + "codEndereco=" + codEndereco + ", endereco=" + endereco + ", numEndereco=" + numEndereco + ", usuario=" + usuario + '}';
     }
+ 
+
+
+
 }

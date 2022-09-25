@@ -1,5 +1,6 @@
 package app_java_eng.demo.model;
  
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,33 +28,31 @@ public class Agendamento {
     private String telCont;
 
     @OneToMany
-    @JoinColumn(name = "codUsuario", referencedColumnName = "codUsuario")
-    private Usuario usuario;
+    private List<Usuario> usuario;
 
     public Agendamento() {
     }
 
-    public Agendamento(Integer codAgendamento, String nome, String CNPJ, String dataNasc, String telCont) {
+    public Agendamento(Integer codAgendamento, String nome, String CNPJ, String dataNasc, String telCont, List<Usuario> usuario) {
+        this.codAgendamento = codAgendamento;
         this.nome = nome;
         this.CNPJ = CNPJ;
         this.dataNasc = dataNasc;
         this.telCont = telCont;
+        this.usuario = usuario;
     }
 
+    
+    
+    
+    
+    
     public Integer getCodAgendamento() {
         return codAgendamento;
     }
 
     public void setCodAgendamento(Integer codAgendamento) {
         this.codAgendamento = codAgendamento;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 
     public String getNome() {
@@ -88,13 +87,19 @@ public class Agendamento {
         this.telCont = telCont;
     }
 
+    public List<Usuario> getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(List<Usuario> usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
         return "Agendamento{" + "codAgendamento=" + codAgendamento + ", nome=" + nome + ", CNPJ=" + CNPJ + ", dataNasc=" + dataNasc + ", telCont=" + telCont + ", usuario=" + usuario + '}';
     }
 
-    
-    
     
     
     

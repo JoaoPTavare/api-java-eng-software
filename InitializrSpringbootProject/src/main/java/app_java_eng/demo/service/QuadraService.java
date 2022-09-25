@@ -2,7 +2,6 @@
 package app_java_eng.demo.service;
 
 import app_java_eng.demo.model.Quadra;
-import app_java_eng.demo.model.Usuario;
 import java.util.List;
 import java.util.Optional;
 

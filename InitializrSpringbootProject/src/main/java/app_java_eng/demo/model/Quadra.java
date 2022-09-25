@@ -1,5 +1,6 @@
 package app_java_eng.demo.model;
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,22 +32,18 @@ public class Quadra{
     private String estrutura;
 
     @OneToMany
-    @JoinColumn(name = "codColaborador", referencedColumnName = "codColaborador")
-    private Colaborador colaborador;
+    private List<Colaborador> colaborador;
 
     public Quadra() {
     }
 
-    public Quadra(Integer codQuadra, String modalidades, String localidade, String estrutura, Colaborador colaborador) {
+    public Quadra(Integer codQuadra, String modalidades, String localidade, String estrutura, List<Colaborador> colaborador) {
         this.codQuadra = codQuadra;
         this.modalidades = modalidades;
         this.localidade = localidade;
         this.estrutura = estrutura;
         this.colaborador = colaborador;
     }
-    
-    
-    
 
     public Integer getCodQuadra() {
         return codQuadra;
@@ -80,19 +77,23 @@ public class Quadra{
         this.estrutura = estrutura;
     }
 
-    public Colaborador getColaborador() {
+    public List<Colaborador> getColaborador() {
         return colaborador;
     }
 
-    public void setColaborador(Colaborador colaborador) {
+    public void setColaborador(List<Colaborador> colaborador) {
         this.colaborador = colaborador;
     }
 
+    
+    
+    
     @Override
     public String toString() {
         return "Quadra{" + "codQuadra=" + codQuadra + ", modalidades=" + modalidades + ", localidade=" + localidade + ", estrutura=" + estrutura + ", colaborador=" + colaborador + '}';
     }
- 
+   
+    
     
     
     
