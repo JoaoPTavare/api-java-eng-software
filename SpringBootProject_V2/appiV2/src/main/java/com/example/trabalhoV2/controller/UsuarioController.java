@@ -1,8 +1,11 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.example.trabalhoV2.controller;
 
-package app_java_eng.demo.controller;
-
-import app_java_eng.demo.model.Usuario;
-import app_java_eng.demo.service.UsuarioService;
+import com.example.trabalhoV2.Service.UsuarioService;
+import com.example.trabalhoV2.demo.Usuario;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,24 +20,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/**
+ *
+ * @author jptav
+ */
 
 @RestController
 @RequestMapping("/api")
 public class UsuarioController {
     
     
-     @Autowired
-     private UsuarioService usuarioService;
-
-
-
-     @GetMapping("/usuario")
-    public ResponseEntity<List<Usuario>>listausuario(){
-        return ResponseEntity.status(HttpStatus.OK).body(usuarioService.listausuario());
+   @Autowired
+    private UsuarioService usuarioService;
+    
+   @GetMapping("/usuario")
+    public ResponseEntity<List<Usuario>> listaUsuarios(){
+    return ResponseEntity.status(HttpStatus.OK).body(usuarioService.listaUsuario());
     }
-     
- 
     
     @GetMapping("Usuario/{codUsuario}")
     public ResponseEntity<Optional<Usuario>> getByIdUsuario(@PathVariable Integer codUsuario){
@@ -51,12 +53,10 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.OK).body(usuarioService.atualizaUsuario(usuario));
     }
     
-    @DeleteMapping("Usuário/{codUsuario}")
+    @DeleteMapping("usuario/{codUsuario}")
     public ResponseEntity<String> deleteByIdUsuario(@PathVariable Integer codUsuario){
         usuarioService.deleteByIdUsuario(codUsuario);
-        return ResponseEntity.status(HttpStatus.OK).body("Usuário removido com sucesso");
+        return ResponseEntity.status(HttpStatus.OK).body("Usuario removido com sucesso");
     }
-    
-    
     
 }

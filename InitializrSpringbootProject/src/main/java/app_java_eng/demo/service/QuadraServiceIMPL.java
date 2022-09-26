@@ -12,30 +12,30 @@ import org.springframework.stereotype.Service;
 public abstract class QuadraServiceIMPL implements QuadraService{
    
      @Autowired 
-     private QuadraRepository QuadraRepository;
+     private QuadraRepository quadraRepository;
      
     @Override
     public List<Quadra> listaQuadra(){
-        return QuadraRepository.findAll();
+        return quadraRepository.findAll();
      }
      
     @Override
     public Optional<Quadra> getByIdQuadra(Integer codQuadra) {
-        return QuadraRepository.findById(codQuadra); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return quadraRepository.findById(codQuadra);
     }
 
     @Override
     public Quadra atualizaQuadra(Quadra quadra) {
-          return QuadraRepository.save(quadra); 
+          return quadraRepository.save(quadra);
     }
 
     @Override
     public void deleteByIdQuadra(Integer codQuadra) {
-      QuadraRepository.deleteById(codQuadra); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      quadraRepository.deleteById(codQuadra);
     }
         
        @Override
     public Quadra salvaQuadra(Quadra quadra) {
-        return QuadraRepository.save(quadra);
+        return quadraRepository.save(quadra);
     }
 }

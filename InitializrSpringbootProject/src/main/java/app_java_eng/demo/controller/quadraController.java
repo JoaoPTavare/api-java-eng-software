@@ -2,7 +2,6 @@
 package app_java_eng.demo.controller;
 
 import app_java_eng.demo.model.Quadra;
-import app_java_eng.demo.model.Usuario;
 import app_java_eng.demo.service.QuadraService;
 import java.util.List;
 import java.util.Optional;
@@ -26,34 +25,34 @@ public class QuadraController {
     
     
      @Autowired
-     public QuadraService QuadraService;
+     public QuadraService quadraService;
      
  
     @GetMapping("/quadra")
     public ResponseEntity<List<Quadra>> listaQuadra(){
-        return ResponseEntity.status(HttpStatus.OK).body(QuadraService.listaQuadra());
+        return ResponseEntity.status(HttpStatus.OK).body(quadraService.listaQuadra());
     }   
      
       @GetMapping("produto/{codproduto}")
-    public ResponseEntity<Optional<Quadra>> getByIdProduto(@PathVariable Integer codQuadra){
-        return ResponseEntity.status(HttpStatus.OK).body(QuadraService.getByIdQuadra(codQuadra));
+    public ResponseEntity<Optional<Quadra>> getByIdQuadra(@PathVariable Integer codQuadra){
+        return ResponseEntity.status(HttpStatus.OK).body(quadraService.getByIdQuadra(codQuadra));
     }
     
     
     @PostMapping("quadra")
     public ResponseEntity<Quadra> salvaQuadra(@RequestBody Quadra quadra){
-        return ResponseEntity.status(HttpStatus.CREATED).body(QuadraService.salvaQuadra(quadra));
+        return ResponseEntity.status(HttpStatus.CREATED).body(quadraService.salvaQuadra(quadra));
     }
 
     @PutMapping("quadra")
     public ResponseEntity<Quadra> atualizaQuadra(@RequestBody Quadra quadra){
-        return ResponseEntity.status(HttpStatus.OK).body(QuadraService.atualizaQuadra(quadra));
+        return ResponseEntity.status(HttpStatus.OK).body(quadraService.atualizaQuadra(quadra));
     }
     
     @DeleteMapping("Quadra/{codQuadra}")
     public ResponseEntity<String> deleteByIdQuadra(@PathVariable Integer codQuadra){
-        QuadraService.deleteByIdQuadra(codQuadra);
-        return ResponseEntity.status(HttpStatus.OK).body("Usuário removido com sucesso");
+        quadraService.deleteByIdQuadra(codQuadra);
+        return ResponseEntity.status(HttpStatus.OK).body("Quadra removido com sucesso");
     }
     
 

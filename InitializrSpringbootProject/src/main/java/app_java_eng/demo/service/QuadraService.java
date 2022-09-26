@@ -12,11 +12,7 @@ public interface QuadraService {
     public Optional<Quadra> getByIdQuadra(Integer codQuadra);
     
     public Quadra atualizaQuadra(Quadra quadra);
-    
-    public void deleteByIdQuadra(Integer codQuadra);    
-    
-    public Quadra atualizaUsuario(Quadra quadra);
-    
+
     public Quadra salvaQuadra(Quadra quadra);
-    
+    public void deleteByIdQuadra(Integer codQuadra);
 }
